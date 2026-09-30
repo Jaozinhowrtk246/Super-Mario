@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,102 +7,55 @@
 .game-board {
     width: 100%;
     height: 500px;
-
-    border-bottom: 15px solid rgb(35, 160, 35);
-
+    border: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
-
     position: relative;
-
     overflow: hidden;
-
     background: linear-gradient(#87ceeb, #e0f6ff);
 }
 
-/* =========================
-   TUBO
-========================= */
-
 .pipe {
-    position: absolute;
-
+    position:absolute;
     bottom: 0;
-    right: -100px;
-
     width: 80px;
-
-    z-index: 2;
-
-    animation: pipe-animation 3s infinite linear;
+    animation: pipe-animation 1.2s infinite linear;
 }
 
-/* =========================
-   MARIO
-========================= */
-
-.mario {
-    position: absolute;
-
+.mario{
     width: 150px;
-
+    position:absolute;
     bottom: 0;
-    left: 50px;
-
-    z-index: 3;
 }
-
-/* Classe adicionada pelo JavaScript */
-
 .jump {
-    animation: jump-animation 700ms ease-out;
+    animation: jump 500ms ease-out;
 }
-
-/* =========================
-   NUVENS
-========================= */
 
 .clouds {
     position: absolute;
-
-    top: 30px;
-    right: -550px;
-
     width: 550px;
-
-    z-index: 1;
-
     animation: clouds-animation 20s infinite linear;
 }
 
-/* =========================
-   ANIMAÇÃO DO TUBO
-========================= */
-
 @keyframes pipe-animation {
-
-    from {
-        right: -100px;
+    from{
+        right: -80px;
     }
 
-    to {
+    to{
         right: 100%;
     }
 }
 
-/* =========================
-   ANIMAÇÃO DO PULO
-========================= */
-
-@keyframes jump-animation {
-
+@keyframes jump {
     0% {
         bottom: 0;
     }
-
     40% {
         bottom: 180px;
     }
-
+    60% {
+        bottom: 180px;
+    }
     50% {
         bottom: 180px;
     }
@@ -112,12 +65,7 @@
     }
 }
 
-/* =========================
-   ANIMAÇÃO DAS NUVENS
-========================= */
-
 @keyframes clouds-animation {
-
     from {
         right: -550px;
     }
