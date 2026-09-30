@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="/js/script.js" defer></script>
-
+    <link rel="stylesheet" href="style.css">
     <title>Mario Jump</title>
 </head>
 <body>
-    
-    <div class="game-board">
-        <img src="clouds.png" class="clouds">
-        <img src="mario.gif" class="mario">
-        <img src="pipe.png" class="pipe>
 
+    <div class="game-board">
+        <img src="clouds.png" class="clouds" alt="Nuvens">
+        <img src="mario.gif" class="mario" alt="Mario">
+        <img src="pipe.png" class="pipe" alt="Tubo">
     </div>
+
+    <!-- O atributo 'defer' garante que o JS rode só após o HTML carregar -->
+    <script src="script.js" defer></script>
 </body>
 </html>
